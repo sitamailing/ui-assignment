@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENIA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <a href="#" class="nav-logo">VENIA</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Women</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Men</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Smart Gear</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Accessories</a>
+                </li>
+            </ul>
+            <button type="button" class="icon-button">
+                <span class="material-icons">notifications</span>
+                <span class="icon-button__badge">2</span>
+            </button>
+        </nav>
+    </header>
+    <div class="main-content">
+        <div class="product-types">
+            <ul class="breadcrumb" id="breadcrumb"></ul>
+        </div>
+        <div class="product-section">
+            <div class="product-actions">
+                <div class="filter-products">
+                    <span onclick="filterProducts()">Filter Results</span>
+                </div>
+                <div class="search-products">
+                    <span onclick="sortingProducts()">Sort Products</span>
+                </div>
+            </div>
+            <div class="product-details">
+                <div class="categories-list-block">
+                    <div class="filter-title"><span>Filters</span></div>
+                    <div class="categories-title"><span>Categories</span></div>
+                    <div class="categories-list-section">
+                        <div id="categories-list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="other-content">
+                <div class="search-section">
+                    <div class="totals"><span id="total-results">10</span><span> Results</span></div>
+                    <div>
+                        <select id="sort">
+                            <option value="" disabled selected hidden>Sort by Price</option>
+                            <option value="asc">Low to High</option>
+                            <option value="desc">High to Low</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="text" id="search" placeholder="Search products">
+                    </div>
+                </div>
+                <div id="product-container" class="product-cont"></div>
+                <div id="spinner"></div>
+                <div class="card-actions" id="load-more-content">
+                    <button onclick="loadProducts()" id="load-more">Load More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
